@@ -131,14 +131,12 @@ const ProductSection = ({
 
                 <button
                   onClick={() => {
-                    if(isAdded){
-                        onRemoveFromCart(product.id)
-                    } else{
-                        onAddToCart(product)
+                    if (isAdded) {
+                      onRemoveFromCart(product.id);
+                    } else {
+                      onAddToCart(product);
                     }
-
-                }
-                    }
+                  }}
                   className={`btn w-full rounded-xl border-none normal-case font-semibold h-11 min-h-0 transition-all
                     ${isAdded ? "bg-emerald-500 text-white hover:bg-emerald-600" : "bg-[#7C3AED] hover:bg-[#6D28D9] text-white"}
                   `}
