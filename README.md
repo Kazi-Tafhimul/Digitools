@@ -12,7 +12,7 @@ This platform is crafted using modern, high-performance web technologies:
 *   **Styling Engine:** Tailwind CSS
 *   **UI Component Suite:** daisyUI
 *   **Notifications:** React-Toastify
-*   **Icons:** FontAwesome / Custom SVG Vectors
+
 
 ---
 
