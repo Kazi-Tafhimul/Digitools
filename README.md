@@ -1,16 +1,31 @@
-# React + Vite
+# 🚀 DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium digital marketplace and workflow ecosystem built for modern creators, professionals, and scaling businesses. DigiTools simplifies asset management and tool acquisition with a seamless, conversion-focused user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
 
-## React Compiler
+This platform is crafted using modern, high-performance web technologies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Frontend Library:** React.js (Functional Components & Hooks)
+*   **Styling Engine:** Tailwind CSS
+*   **UI Component Suite:** daisyUI
+*   **Notifications:** React-Toastify
+*   **Icons:** FontAwesome / Custom SVG Vectors
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Core Features
+
+### 1. Interactive Multi-State Cart Lifecycle
+Features an advanced product grid where individual items can be added or toggled directly from the UI. The global state intelligently computes cart item totals and live badges in real-time, accompanied by clean user notifications.
+
+### 2. High-Conversion Pricing Matrix
+Includes a completely responsive, modern pricing layout showcasing tiered subscription levels. The flagship **Pro Plan** is prominently highlighted using an elevated design aesthetic and high-contrast styling to optimize user engagement and click-through rates.
+
+### 3. Responsive Component Architecture
+The entire platform is modularized into independent, reusable React components (including a sticky layout-safe Navbar, a standardized Onboarding Workflow section, and a standalone global CTA banner), maintaining strict alignment with professional Figma/Pixso interface design specifications.
+
+---
+
