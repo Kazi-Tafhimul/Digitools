@@ -1,27 +1,40 @@
 import { useState } from "react";
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Stats from "./components/Stats";
+import ProductSection from "./components/ProductSection";
 
 import "./App.css";
 
 function App() {
-  const [cartCount, setCartCount] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+  const handleAddToCart = (product) => {
+    const alreadyExists = cartItems.some((item) => item.id === product.id);
+    if (!alreadyExists) {
+      setCartItems([...cartItems, product]);
+    }
+  };
+  const handleRemoveFromCart = (productId) => {
+    setCartItems(cartItems.filter((item) => item.id !== productId));
+  };
+  const handleCheckout = () => {
+    alert("Checkout successful!");
+    setCartItems([]);
+  };
+  const cartTotal = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar cartCount={cartCount} />
+      <Navbar cartCount={cartItems.length} />
       <Banner></Banner>
       <Stats></Stats>
-
-      <div className="p-8 text-center">
-        <button
-          onClick={() => setCartCount(cartCount + 1)}
-          className="btn btn-outline"
-        >
-          Test Add Item (Cart: {cartCount})
-        </button>
-      </div>
+      <ProductSection
+        cartItems={cartItems}
+        onAddToCart={handleAddToCart}
+        onRemoveFromCart={handleRemoveFromCart}
+        onCheckout={handleCheckout}
+        cartTotal={cartTotal}
+      />
     </div>
   );
 }
