@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Stats from "./components/Stats";
 import ProductSection from "./components/ProductSection";
+import HowItWorks from "./components/HowItWorks";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -36,6 +37,7 @@ function App() {
         onCheckout={handleCheckout}
         cartTotal={cartTotal}
       />
+      <HowItWorks></HowItWorks>
       <Footer></Footer>
     </div>
   );
