@@ -6,6 +6,8 @@ import ProductSection from "./components/ProductSection";
 import HowItWorks from "./components/HowItWorks";
 import Footer from "./components/Footer";
 import Pricing from "./components/Pricing";
+import CtaBanner from "./components/ctaBanner";
+import { toast, ToastContainer } from "react-toastify";
 
 import "./App.css";
 
@@ -15,14 +17,21 @@ function App() {
     const alreadyExists = cartItems.some((item) => item.id === product.id);
     if (!alreadyExists) {
       setCartItems([...cartItems, product]);
+      toast.success(`Added ${product.name} to your cart`)
     }
   };
   const handleRemoveFromCart = (productId) => {
+    const targetProduct = cartItems.find(item => item.id === productId);
     setCartItems(cartItems.filter((item) => item.id !== productId));
+    if(targetProduct){
+      toast.info(`Remove ${targetProduct.name} from cart`)
+    }
+
   };
   const handleCheckout = () => {
-    alert("Checkout successful!");
+    
     setCartItems([]);
+    toast.success(" Purchase Successful! Welcome to the premium tier.");
   };
   const cartTotal = cartItems.reduce((acc, item) => acc + item.price, 0);
 
@@ -40,7 +49,9 @@ function App() {
       />
       <HowItWorks></HowItWorks>
       <Pricing></Pricing>
+      <CtaBanner></CtaBanner>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
